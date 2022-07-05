@@ -1,0 +1,48 @@
+<?php
+function base_Url($a=''){
+    $getbase_url=$GLOBALS['setUrl']['base'];
+    return $getbase_url.$a;
+}
+
+    function assets($a=''){
+        $getbase_assets=$GLOBALS['setUrl']['assets'];
+        return base_Url($getbase_assets.$a);
+}
+    function url($a= '',$b= ''){
+        return base_Url($b. '?halaman'.$a);
+}
+
+    function templates($a= ''){
+        return assets($GLOBALS['templates'].$a);
+    }
+
+
+    function content_open($title=''){
+       return '
+        <section class="content">
+    
+          <!-- Default box -->
+          <div class="box">
+              <div class="box-header with-border">
+                <h3 class="box-title">'.$title.'</h3>
+      
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                          title="Collapse">
+                    <i class="fa fa-minus"></i></button>
+                  <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                    <i class="fa fa-times"></i></button>
+                </div>
+              </div>
+            <div class="box-body">
+            ';
+    }
+
+    function content_close(){
+        return '
+        </div>
+        </div>
+        </section>
+        <!-- /.content -->
+      ';
+    }

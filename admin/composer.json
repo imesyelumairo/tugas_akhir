@@ -1,0 +1,15 @@
+{
+    "name": "arfando/webgiskulur2-php",
+    "require": {
+        "joshcam/mysqli-database-class": "*",
+        "josantonius/session": "^1.1",
+        "verot/class.upload.php": "dev-master"
+    },
+    "license": "tidak ada",
+    "authors": [
+        {
+            "name": "arfando",
+            "email": "pietertampilang@gmail.com"
+        }
+    ]
+}
